@@ -4,9 +4,12 @@
 //     https://github.com/FastTunnel/FastTunnel/edit/v2/LICENSE
 // Copyright (c) 2019 Gui.H
 
+using FastTunnel.Core.Client;
 using FastTunnel.Core.Handlers.Server;
+using FastTunnel.Core.Utilitys;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Net.WebSockets;
@@ -28,13 +31,15 @@ namespace FastTunnel.Core.Listener
         ForwardDispatcher _requestDispatcher;
         readonly Socket listenSocket;
         readonly WebSocket client;
+        readonly FastTunnelServer server;
 
-        public PortProxyListener(string ip, int port, ILogger logerr, WebSocket client)
+        public PortProxyListener(string ip, int port, ILogger logerr, WebSocket client, FastTunnelServer server)
         {
             this.client = client;
             _logerr = logerr;
             this.ListenIp = ip;
             this.ListenPort = port;
+            this.server = server;
 
             IPAddress ipa = IPAddress.Parse(ListenIp);
             IPEndPoint localEndPoint = new IPEndPoint(ipa, ListenPort);
@@ -52,7 +57,25 @@ namespace FastTunnel.Core.Listener
 
             StartAccept(null);
         }
-
+        private bool CheckForwardAllowAccessIps(Socket socket)
+        {
+            if (server.ServerOption.CurrentValue.ForwardAllowAccessIps.Length > 0)
+            {
+                var remoteAddress = (socket.RemoteEndPoint as IPEndPoint).Address.GetIPV4Address();
+                var ips = server.ServerOption.CurrentValue.ForwardAllowAccessIps.Select(t => IPEndPoint.Parse(t).Address);
+                var result= ips.Contains(remoteAddress);
+                if (result)
+                {
+                    Console.WriteLine($"IP Forward Flite :{remoteAddress} open");
+                }
+                else
+                {
+                    Console.WriteLine($"IP Forward Flite :{remoteAddress} close");
+                }
+                return result;
+            }
+            return true;
+        }
         private void StartAccept(SocketAsyncEventArgs acceptEventArg)
         {
             try
@@ -86,11 +109,25 @@ namespace FastTunnel.Core.Listener
             if (e.SocketError == SocketError.Success)
             {
                 var accept = e.AcceptSocket;
+                if (CheckForwardAllowAccessIps(accept))
+                {
+                    IncrementClients();
 
-                IncrementClients();
+                    // 将此客户端交由Dispatcher进行管理
+                    _requestDispatcher.DispatchAsync(accept, client, this);
 
-                // 将此客户端交由Dispatcher进行管理
-                _requestDispatcher.DispatchAsync(accept, client, this);
+                }
+                else
+                {
+                    try
+                    {
+                        accept?.Close();
+                        _logerr.LogDebug($"【{ListenIp}:{ListenPort}】: Close Accept");
+                    }
+                    catch (Exception)
+                    {
+                    }
+                }
 
                 // Accept the next connection request
                 StartAccept(e);

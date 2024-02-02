@@ -41,7 +41,8 @@ public static class ServicesExtensions
             .AddTransient<ILoginHandler, LoginHandler>()
             .AddSingleton<FastTunnelClientHandler>()
             .AddSingleton<FastTunnelSwapHandler>()
-            .AddSingleton<FastTunnelServer>();
+            .AddSingleton<FastTunnelServer>()
+            .AddSingleton<CheckWebAllowAccessIpsHandler>();
     }
 
     /// <summary>
@@ -54,8 +55,10 @@ public static class ServicesExtensions
 
         var swapHandler = app.ApplicationServices.GetRequiredService<FastTunnelSwapHandler>();
         var clientHandler = app.ApplicationServices.GetRequiredService<FastTunnelClientHandler>();
+        var checkWebAllowAccessIpsHandler = app.ApplicationServices.GetRequiredService<CheckWebAllowAccessIpsHandler>();
         app.Use(clientHandler.Handle);
         app.Use(swapHandler.Handle);
+        app.Use(checkWebAllowAccessIpsHandler.Handle);
     }
 
     public static void MapFastTunnelServer(this IEndpointRouteBuilder endpoints)
