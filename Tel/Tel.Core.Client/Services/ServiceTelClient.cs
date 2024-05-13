@@ -13,24 +13,24 @@ namespace Tel.Core.Services
     public class ServiceTelClient : IHostedService
     {
         readonly ILogger<ServiceTelClient> _logger;
-        readonly ITelClient _fastTunnelClient;
+        readonly ITelClient _TelClient;
 
         public ServiceTelClient(ILogger<ServiceTelClient> logger, ITelClient fastTunnelClient)
         {
             _logger = logger;
-            _fastTunnelClient = fastTunnelClient;
+            _TelClient = fastTunnelClient;
 
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
         }
 
         public async Task StartAsync(CancellationToken cancellationToken)
         {
-            await _fastTunnelClient.StartAsync(cancellationToken);
+            await _TelClient.StartAsync(cancellationToken);
         }
 
         public async Task StopAsync(CancellationToken cancellationToken)
         {
-            await _fastTunnelClient.StopAsync(cancellationToken);
+            await _TelClient.StopAsync(cancellationToken);
         }
 
         private void CurrentDomain_UnhandledException(object sender, UnhandledExceptionEventArgs e)

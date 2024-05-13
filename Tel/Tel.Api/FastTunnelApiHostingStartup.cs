@@ -25,13 +25,13 @@ public class TelApiHostingStartup : IHostingStartup
 {
     public void Configure(IWebHostBuilder builder)
     {
-        Debug.WriteLine("FastTunnelApiHostingStartup Configured");
+        Debug.WriteLine("TelApiHostingStartup Configured");
 
         builder.ConfigureServices((webHostBuilderContext, services) =>
         {
             services.AddControllers();
 
-            var serverOptions = webHostBuilderContext.Configuration.GetSection("FastTunnel").Get<DefaultServerConfig>();
+            var serverOptions = webHostBuilderContext.Configuration.GetSection("TelConfig").Get<DefaultServerConfig>();
             if (serverOptions.Api?.JWT != null)
             {
                 services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

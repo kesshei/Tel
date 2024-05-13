@@ -13,7 +13,6 @@ using Tel.Core.Models.Massage;
 using Tel.Core.Utilitys;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using FastTunnel.Core;
 
 namespace Tel.Core.Client;
 
@@ -50,7 +49,7 @@ public class TelClient : ITelClient
     /// </summary>
     public virtual async Task StartAsync(CancellationToken cancellationToken)
     {
-        _logger.LogInformation("===== FastTunnel Client Start =====");
+        _logger.LogInformation("===== Tel Client Start =====");
 
         while (!cancellationToken.IsCancellationRequested)
         {
@@ -66,7 +65,7 @@ public class TelClient : ITelClient
             }
         }
 
-        _logger.LogInformation("===== FastTunnel Client End =====");
+        _logger.LogInformation("===== Tel Client End =====");
     }
 
     private async Task loginAsync(CancellationToken cancellationToken)
@@ -152,7 +151,7 @@ public class TelClient : ITelClient
 
     public async Task StopAsync(CancellationToken cancellationToken)
     {
-        _logger.LogInformation("===== FastTunnel Client Stoping =====");
+        _logger.LogInformation("===== Tel Client Stoping =====");
         if (socket != null)
         {
             socket.Abort();

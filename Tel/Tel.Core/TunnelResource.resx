@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -121,7 +121,7 @@
     <value>服务端禁用了Forward</value>
   </data>
   <data name="NoTunnel" xml:space="preserve">
-    <value>您尚未创建任何隧道，请登录https://suidao.io 创建后重试。</value>
+    <value>您尚未创建任何隧道，请登录https:// 创建后重试。</value>
   </data>
   <data name="Page_HostRequired" xml:space="preserve">
     <value>&lt;!DOCTYPE html&gt;
@@ -130,7 +130,7 @@
 &lt;head&gt;
   &lt;meta charset="utf-8" /&gt;
   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-  &lt;title&gt;FastTunnel&lt;/title&gt;
+  &lt;title&gt;Tel&lt;/title&gt;
   &lt;link href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"&gt;
   &lt;style&gt;
     .err-info {
@@ -212,7 +212,7 @@
     &lt;main role="main" class="pb-3"&gt;
       &lt;div class="text-center"&gt;
         &lt;h1 class="display-4"&gt;Http请求必须使用域名访问&lt;/h1&gt;
-        &lt;p&gt;本页面的方法不能解决您的问题？ 去github提交&lt;a target="_blank" href="https://github.com/SpringHgui/FastTunnel/issues"&gt;issue&lt;/a&gt;给软件作者.
+        &lt;p&gt;本页面的方法不能解决您的问题？ 去github提交&lt;a target="_blank" href=""&gt;issue&lt;/a&gt;给软件作者.
       &lt;/div&gt;
 
       &lt;blockquote style="padding-top: 4em;"&gt;
@@ -225,14 +225,14 @@
       &lt;/ol&gt;
       &lt;blockquote style="padding-top: 4em;"&gt;
         &lt;p class="lead"&gt;提醒：当前软件处于开发阶段，客户端版本可能会更新频繁，如遇到客户端异常，请登录&lt;a target="_blank"
-            href="https://suidao.io"&gt;suidao.io&lt;/a&gt;下载最新的客户端重试。&lt;/p&gt;
+            href="https://"&gt;&lt;/a&gt;下载最新的客户端重试。&lt;/p&gt;
       &lt;/blockquote&gt;
     &lt;/main&gt;
   &lt;/div&gt;
 
   &lt;footer class="border-top footer text-muted"&gt;
     &lt;div class="container"&gt;
-      &lt;a href="https://github.com/SpringHgui/FastTunnel" target="_blank"&gt;© Power By FastTunnel&lt;/a&gt;
+      &lt;a href="" target="_blank"&gt;© Power By Tel&lt;/a&gt;
     &lt;/div&gt;
   &lt;/footer&gt;
 &lt;/body&gt;
@@ -245,7 +245,7 @@
 &lt;head&gt;
   &lt;meta charset="utf-8" /&gt;
   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
-  &lt;title&gt;FastTunnel&lt;/title&gt;
+  &lt;title&gt;Tel&lt;/title&gt;
   &lt;link href="https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"&gt;
   &lt;style&gt;
     .err-info {
@@ -327,7 +327,7 @@
     &lt;main role="main" class="pb-3"&gt;
       &lt;div class="text-center"&gt;
         &lt;h1 class="display-4"&gt;连接内网的服务失败&lt;/h1&gt;
-        &lt;p&gt;内网服务不会搭建？ 去github提交&lt;a target="_blank" href="https://github.com/SpringHgui/FastTunnel/issues"&gt;issue&lt;/a&gt;给软件作者.
+        &lt;p&gt;内网服务不会搭建？ 去github提交&lt;a target="_blank" href=""&gt;issue&lt;/a&gt;给软件作者.
       &lt;/div&gt;
 
       &lt;blockquote style="padding-top: 4em;"&gt;
@@ -340,14 +340,14 @@
       &lt;/ol&gt;
       &lt;blockquote style="padding-top: 4em;"&gt;
         &lt;p class="lead"&gt;提醒：当前软件处于开发阶段，客户端版本可能会更新频繁，如遇到客户端异常，请登录&lt;a target="_blank"
-            href="https://suidao.io"&gt;suidao.io&lt;/a&gt;下载最新的客户端重试。&lt;/p&gt;
+            href=""&gt;&lt;/a&gt;下载最新的客户端重试。&lt;/p&gt;
       &lt;/blockquote&gt;
     &lt;/main&gt;
   &lt;/div&gt;
 
   &lt;footer class="border-top footer text-muted"&gt;
     &lt;div class="container"&gt;
-      &lt;a href="https://github.com/SpringHgui/FastTunnel" target="_blank"&gt;© Power By FastTunnel&lt;/a&gt;
+      &lt;a href="" target="_blank"&gt;© Power By FastTunnel&lt;/a&gt;
     &lt;/div&gt;
   &lt;/footer&gt;
 &lt;/body&gt;
@@ -444,7 +444,7 @@
     &lt;main role="main" class="pb-3"&gt;
       &lt;div class="text-center"&gt;
         &lt;h1 class="display-4"&gt;您无权访问此站点&lt;/h1&gt;
-        &lt;p&gt;登录遇到问题？ 去github提交&lt;a target="_blank" href="https://github.com/SpringHgui/FastTunnel/issues"&gt;issue&lt;/a&gt;给软件作者.
+        &lt;p&gt;登录遇到问题？ 去github提交&lt;a target="_blank" href=""&gt;issue&lt;/a&gt;给软件作者.
         &lt;/p&gt;
       &lt;/div&gt;
 
@@ -457,14 +457,14 @@
         &lt;li class="lead"&gt;&lt;/li&gt;
       &lt;/ol&gt;--&gt;
       &lt;blockquote style="padding-top: 4em;"&gt;
-        &lt;p class="lead"&gt;提醒：当前软件处于开发阶段，客户端版本可能会更新频繁，如遇到客户端异常，请登录&lt;a target="_blank" href="https://suidao.io"&gt;suidao.io&lt;/a&gt;下载最新的客户端重试。&lt;/p&gt;
+        &lt;p class="lead"&gt;提醒：当前软件处于开发阶段，客户端版本可能会更新频繁，如遇到客户端异常，请登录&lt;a target="_blank" href=""&gt;&lt;/a&gt;下载最新的客户端重试。&lt;/p&gt;
       &lt;/blockquote&gt;
     &lt;/main&gt;
   &lt;/div&gt;
 
   &lt;footer class="border-top footer text-muted"&gt;
     &lt;div class="container"&gt;
-      &lt;a href="https://github.com/SpringHgui/FastTunnel" target="_blank"&gt;© Power By FastTunnel&lt;/a&gt;
+      &lt;a href="" target="_blank"&gt;© Power By Tel&lt;/a&gt;
     &lt;/div&gt;
   &lt;/footer&gt;
 &lt;/body&gt;
@@ -560,7 +560,7 @@
     &lt;main role="main" class="pb-3"&gt;
       &lt;div class="text-center"&gt;
         &lt;h1 class="display-4"&gt;客户端未登录&lt;/h1&gt;
-        &lt;p&gt;登录遇到问题？ 去github提交&lt;a target="_blank" href="https://github.com/SpringHgui/FastTunnel/issues"&gt;issue&lt;/a&gt;给软件作者.
+        &lt;p&gt;登录遇到问题？ 去github提交&lt;a target="_blank" href=""&gt;issue&lt;/a&gt;给软件作者.
         &lt;/p&gt;
       &lt;/div&gt;
 
@@ -573,14 +573,14 @@
         &lt;li class="lead"&gt;是否启动了客户端并登录成功&lt;/li&gt;
       &lt;/ol&gt;
       &lt;blockquote style="padding-top: 4em;"&gt;
-        &lt;p class="lead"&gt;提醒：当前软件处于开发阶段，客户端版本可能会更新频繁，如遇到客户端异常，请登录&lt;a target="_blank" href="https://suidao.io"&gt;suidao.io&lt;/a&gt;下载最新的客户端重试。&lt;/p&gt;
+        &lt;p class="lead"&gt;提醒：当前软件处于开发阶段，客户端版本可能会更新频繁，如遇到客户端异常，请登录&lt;a target="_blank" href="https://"&gt;&lt;/a&gt;下载最新的客户端重试。&lt;/p&gt;
       &lt;/blockquote&gt;
     &lt;/main&gt;
   &lt;/div&gt;
 
   &lt;footer class="border-top footer text-muted"&gt;
     &lt;div class="container"&gt;
-      &lt;a href="https://github.com/SpringHgui/FastTunnel" target="_blank"&gt;© Power By FastTunnel&lt;/a&gt;
+      &lt;a href="" target="_blank"&gt;© Power By FastTunnel&lt;/a&gt;
     &lt;/div&gt;
   &lt;/footer&gt;
 &lt;/body&gt;
@@ -676,7 +676,7 @@
     &lt;main role="main" class="pb-3"&gt;
       &lt;div class="text-center"&gt;
         &lt;h1 class="display-4"&gt;客户端已离线&lt;/h1&gt;
-        &lt;p&gt;登录遇到问题？ 去github提交&lt;a target="_blank" href="https://github.com/SpringHgui/FastTunnel/issues"&gt;issue&lt;/a&gt;给软件作者.
+        &lt;p&gt;登录遇到问题？ 去github提交&lt;a target="_blank" href=""&gt;issue&lt;/a&gt;给软件作者.
         &lt;/p&gt;
       &lt;/div&gt;
 
@@ -689,14 +689,14 @@
         &lt;li class="lead"&gt;是否启动了客户端并登录成功&lt;/li&gt;
       &lt;/ol&gt;
       &lt;blockquote style="padding-top: 4em;"&gt;
-        &lt;p class="lead"&gt;提醒：当前软件处于开发阶段，客户端版本可能会更新频繁，如遇到客户端异常，请登录&lt;a target="_blank" href="https://suidao.io"&gt;suidao.io&lt;/a&gt;下载最新的客户端重试。&lt;/p&gt;
+        &lt;p class="lead"&gt;提醒：当前软件处于开发阶段，客户端版本可能会更新频繁，如遇到客户端异常，请登录&lt;a target="_blank" href="https://"&gt;&lt;/a&gt;下载最新的客户端重试。&lt;/p&gt;
       &lt;/blockquote&gt;
     &lt;/main&gt;
   &lt;/div&gt;
 
   &lt;footer class="border-top footer text-muted"&gt;
     &lt;div class="container"&gt;
-      &lt;a href="https://github.com/SpringHgui/FastTunnel" target="_blank"&gt;© Power By FastTunnel&lt;/a&gt;
+      &lt;a href="" target="_blank"&gt;© Power By FastTunnel&lt;/a&gt;
     &lt;/div&gt;
   &lt;/footer&gt;
 &lt;/body&gt;

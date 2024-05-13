@@ -37,12 +37,12 @@ public class Startup
 #if DEBUG
         services.AddSwaggerGen(c =>
         {
-            c.SwaggerDoc("v2", new OpenApiInfo { Title = "FastTunel.Api", Version = "v2" });
+            c.SwaggerDoc("v2", new OpenApiInfo { Title = "Tel.Api", Version = "v2" });
         });
 #endif
-        // -------------------FastTunnel STEP1 OF 3------------------
+        // -------------------Tel STEP1 OF 3------------------
         services.AddTelServer(Configuration.GetSection("TelConfig"));
-        // -------------------FastTunnel STEP1 END-------------------
+        // -------------------Tel STEP1 END-------------------
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,15 +53,15 @@ public class Startup
             app.UseDeveloperExceptionPage();
 #if DEBUG
             app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v2/swagger.json", "FastTunel.WebApi v2"));
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v2/swagger.json", "Tel.WebApi v2"));
 #endif
         }
 
         app.UseRouting();
 
-        // -------------------FastTunnel STEP2 OF 3------------------
+        // -------------------Tel STEP2 OF 3------------------
         app.UseTelServer();
-        // -------------------FastTunnel STEP2 END-------------------
+        // -------------------Tel STEP2 END-------------------
 
         app.UseStaticFiles();
         app.UseAuthentication();
@@ -70,9 +70,9 @@ public class Startup
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapControllers();
-            // -------------------FastTunnel STEP3 OF 3------------------
+            // -------------------Tel STEP3 OF 3------------------
             endpoints.MapTelServer();
-            // -------------------FastTunnel STEP3 END-------------------
+            // -------------------Tel STEP3 END-------------------
         });
     }
 }

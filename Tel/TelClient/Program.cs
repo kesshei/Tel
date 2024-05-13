@@ -41,8 +41,8 @@ class Program
             .UseWindowsService()
             .ConfigureServices((hostContext, services) =>
             {
-                // -------------------FastTunnel START------------------
+                // -------------------Tel START------------------
                 services.AddTelClient(hostContext.Configuration.GetSection("TelConfig"));
-                // -------------------FastTunnel EDN--------------------
+                // -------------------Tel EDN--------------------
             });
 }

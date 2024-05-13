@@ -3,20 +3,20 @@
   <PropertyGroup>
     <TargetFrameworks>net8.0</TargetFrameworks>
     <Version>2.1.2</Version>
-    <PackageProjectUrl>https://github.com/SpringHgui/FastTunnel</PackageProjectUrl>
+    <PackageProjectUrl></PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Copyright>FastTunnel</Copyright>
+    <Copyright>Tel</Copyright>
     <Description>expose a local server behind a NAT or firewall to the internet like ngrok and frp</Description>
-    <Authors>Gui.H</Authors>
-    <Company>FastTunnel</Company>
-    <Product>FastTunnel</Product>
+    <Authors>Tel</Authors>
+    <Company>Tel</Company>
+    <Product>Tel</Product>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <RepositoryUrl>https://github.com/SpringHgui/FastTunnel</RepositoryUrl>
+    <RepositoryUrl></RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>FastTunnel.Core</PackageTags>
+    <PackageTags>Tel.Core</PackageTags>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <PackageReleaseNotes>FastTunnel.Core</PackageReleaseNotes>
+    <PackageReleaseNotes>Tel.Core</PackageReleaseNotes>
     <LangVersion>Preview</LangVersion>
   </PropertyGroup>
 

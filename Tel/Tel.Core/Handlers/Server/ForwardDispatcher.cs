@@ -33,7 +33,7 @@ namespace Tel.Core.Handlers.Server
         /// 
         /// </summary>
         /// <param name="_socket">用户请求</param>
-        /// <param name="client">FastTunnel客户端</param>
+        /// <param name="client">Tel 客户端</param>
         /// <returns></returns>
         public async Task DispatchAsync(Socket _socket, WebSocket client, PortProxyListener listener)
         {

@@ -46,7 +46,7 @@ public class LoginHandler : ILoginHandler
 
                 logger.LogDebug($"new domain '{hostName}'");
                 server.WebList.AddOrUpdate(hostName, info, (key, oldInfo) => { return info; });
-                (proxyConfig as FastTunnelInMemoryConfigProvider).AddWeb(hostName);
+                (proxyConfig as TelInMemoryConfigProvider).AddWeb(hostName);
 
                 await client.webSocket.SendCmdAsync(MessageType.Log, $"  HTTP   | http://{hostName}:{client.ConnectionPort} => {item.LocalIp}:{item.LocalPort}", CancellationToken.None);
                 client.AddWeb(info);
@@ -58,7 +58,7 @@ public class LoginHandler : ILoginHandler
                         // TODO:validateDomain
                         hostName = www.Trim().ToLower();
                         server.WebList.AddOrUpdate(www, info, (key, oldInfo) => { return info; });
-                        (proxyConfig as FastTunnelInMemoryConfigProvider).AddWeb(www);
+                        (proxyConfig as TelInMemoryConfigProvider).AddWeb(www);
 
                         await client.webSocket.SendCmdAsync(MessageType.Log, $"  HTTP   | http://{www}:{client.ConnectionPort} => {item.LocalIp}:{item.LocalPort}", CancellationToken.None);
                         client.AddWeb(info);

@@ -1,0 +1,12 @@
+[Unit]
+Description=fast service
+
+[Service]
+Type=simple
+WorkingDirectory=/fastservice
+ExecStart=/fastservice/FastTunnel.Server
+ExecReload=/bin/kill -SIGHUP $MAINPID
+ExecStop=/bin/kill -SIGINT $MAINPID
+
+[Install]
+WantedBy=multi-user.target

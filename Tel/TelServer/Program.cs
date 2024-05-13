@@ -42,7 +42,7 @@ public class Program
             .UseWindowsService()
             .ConfigureWebHost(webHostBuilder =>
             {
-                // Use FastTunnelHostingStartup
+                // Use TelHostingStartup
                 webHostBuilder.UseSetting(WebHostDefaults.HostingStartupAssembliesKey, "Tel.Api");
 
                 webHostBuilder.ConfigureAppConfiguration((hostingContext, config) =>
