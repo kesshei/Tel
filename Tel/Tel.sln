@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31410.414
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{0E2A9DA2-26AE-4657-B4C5-3A913E2F5A3C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{54494A47-33E6-488B-B7D4-DBE8FD34916A}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelServer", "TelServer\TelServer.csproj", "{34BC8051-8051-40AD-A0B6-CB822BD19ECD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelClient", "TelClient\TelClient.csproj", "{53DC1A7E-9E0C-4656-AD35-33FC3CB3C155}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tel.Api", "Tel.Api\Tel.Api.csproj", "{59923C85-CD28-49C0-9168-6DE6212C6EB8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tel.Core.Client", "Tel.Core.Client\Tel.Core.Client.csproj", "{3FBDDD8B-B566-4D11-B6B5-09A45BB23076}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tel.Core", "Tel.Core\Tel.Core.csproj", "{61F2F022-4ACF-4BF6-AC4F-CFAF7CFF267F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{34BC8051-8051-40AD-A0B6-CB822BD19ECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34BC8051-8051-40AD-A0B6-CB822BD19ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34BC8051-8051-40AD-A0B6-CB822BD19ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34BC8051-8051-40AD-A0B6-CB822BD19ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53DC1A7E-9E0C-4656-AD35-33FC3CB3C155}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53DC1A7E-9E0C-4656-AD35-33FC3CB3C155}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53DC1A7E-9E0C-4656-AD35-33FC3CB3C155}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53DC1A7E-9E0C-4656-AD35-33FC3CB3C155}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59923C85-CD28-49C0-9168-6DE6212C6EB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59923C85-CD28-49C0-9168-6DE6212C6EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59923C85-CD28-49C0-9168-6DE6212C6EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59923C85-CD28-49C0-9168-6DE6212C6EB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FBDDD8B-B566-4D11-B6B5-09A45BB23076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FBDDD8B-B566-4D11-B6B5-09A45BB23076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FBDDD8B-B566-4D11-B6B5-09A45BB23076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FBDDD8B-B566-4D11-B6B5-09A45BB23076}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61F2F022-4ACF-4BF6-AC4F-CFAF7CFF267F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61F2F022-4ACF-4BF6-AC4F-CFAF7CFF267F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61F2F022-4ACF-4BF6-AC4F-CFAF7CFF267F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61F2F022-4ACF-4BF6-AC4F-CFAF7CFF267F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{59923C85-CD28-49C0-9168-6DE6212C6EB8} = {0E2A9DA2-26AE-4657-B4C5-3A913E2F5A3C}
+		{3FBDDD8B-B566-4D11-B6B5-09A45BB23076} = {0E2A9DA2-26AE-4657-B4C5-3A913E2F5A3C}
+		{61F2F022-4ACF-4BF6-AC4F-CFAF7CFF267F} = {0E2A9DA2-26AE-4657-B4C5-3A913E2F5A3C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D9C6B44-6706-4EE8-9043-802BBE474A2E}
+	EndGlobalSection
+EndGlobal
