@@ -15,10 +15,10 @@ namespace Tel.Core.Services
         readonly ILogger<ServiceTelClient> _logger;
         readonly ITelClient _TelClient;
 
-        public ServiceTelClient(ILogger<ServiceTelClient> logger, ITelClient fastTunnelClient)
+        public ServiceTelClient(ILogger<ServiceTelClient> logger, ITelClient telClient)
         {
             _logger = logger;
-            _TelClient = fastTunnelClient;
+            _TelClient = telClient;
 
             AppDomain.CurrentDomain.UnhandledException += CurrentDomain_UnhandledException;
         }

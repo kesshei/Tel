@@ -1,6 +1,6 @@
 #!/bin/sh
 ServerPath='/lib/systemd/system'
-FileName='fast.service'
+FileName='telclient.service'
 
 chmod +x $FileName
 chmod +x RemoveServer.sh

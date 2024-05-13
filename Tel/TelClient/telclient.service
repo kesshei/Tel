@@ -1,10 +1,10 @@
 [Unit]
-Description=fast service
+Description=client service
 
 [Service]
 Type=simple
-WorkingDirectory=/fastservice
-ExecStart=/fastservice/FastTunnel.Server
+WorkingDirectory=/client
+ExecStart=/client/telclient
 ExecReload=/bin/kill -SIGHUP $MAINPID
 ExecStop=/bin/kill -SIGINT $MAINPID
 

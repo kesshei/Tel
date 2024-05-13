@@ -1,10 +1,10 @@
 [Unit]
-Description=fast service
+Description=telserver
 
 [Service]
 Type=simple
-WorkingDirectory=/fastservice
-ExecStart=/fastservice/FastTunnel.Server
+WorkingDirectory=/server
+ExecStart=/server/telserver
 ExecReload=/bin/kill -SIGHUP $MAINPID
 ExecStop=/bin/kill -SIGINT $MAINPID
 

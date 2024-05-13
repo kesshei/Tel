@@ -144,7 +144,7 @@ namespace Tel.Core {
         ///&lt;head&gt;
         ///  &lt;meta charset=&quot;utf-8&quot; /&gt;
         ///  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-        ///  &lt;title&gt;FastTunnel&lt;/title&gt;
+        ///  &lt;title&gt;Tel&lt;/title&gt;
         ///  &lt;link href=&quot;https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
         ///  &lt;style&gt;
         ///    .err-info {
@@ -159,7 +159,7 @@ namespace Tel.Core {
         ///    .btn-primary {
         ///      color: #fff;
         ///      background-color: #1b6ec2;
-        ///      bor [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        ///      border-col [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         public static string Page_NotAccessIps {
             get {
@@ -174,7 +174,7 @@ namespace Tel.Core {
         ///&lt;head&gt;
         ///  &lt;meta charset=&quot;utf-8&quot; /&gt;
         ///  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-        ///  &lt;title&gt;FastTunnel&lt;/title&gt;
+        ///  &lt;title&gt;Tel&lt;/title&gt;
         ///  &lt;link href=&quot;https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
         ///  &lt;style&gt;
         ///    .err-info {
@@ -189,7 +189,7 @@ namespace Tel.Core {
         ///    .btn-primary {
         ///      color: #fff;
         ///      background-color: #1b6ec2;
-        ///      bor [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        ///      border-col [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         public static string Page_NotFund {
             get {
@@ -204,7 +204,7 @@ namespace Tel.Core {
         ///&lt;head&gt;
         ///  &lt;meta charset=&quot;utf-8&quot; /&gt;
         ///  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
-        ///  &lt;title&gt;FastTunnel&lt;/title&gt;
+        ///  &lt;title&gt;Tel&lt;/title&gt;
         ///  &lt;link href=&quot;https://cdn.bootcss.com/twitter-bootstrap/4.4.1/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
         ///  &lt;style&gt;
         ///    .err-info {
@@ -219,7 +219,7 @@ namespace Tel.Core {
         ///    .btn-primary {
         ///      color: #fff;
         ///      background-color: #1b6ec2;
-        ///      bor [字符串的其余部分被截断]&quot;; 的本地化字符串。
+        ///      border-col [字符串的其余部分被截断]&quot;; 的本地化字符串。
         /// </summary>
         public static string Page_Offline {
             get {
