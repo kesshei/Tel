@@ -32,7 +32,7 @@ public class Startup
     {
         services.AddAuthorization();
 
-        services.AddControllers();
+        services.AddControllersWithViews();
 
 #if DEBUG
         services.AddSwaggerGen(c =>

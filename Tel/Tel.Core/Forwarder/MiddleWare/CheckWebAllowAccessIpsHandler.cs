@@ -28,24 +28,24 @@ public class CheckWebAllowAccessIpsHandler
     }
     public async Task Handle(HttpContext context, Func<Task> next)
     {
-        if (TelServer.ServerOption.CurrentValue.WebAllowAccessIps.Length > 0)
-        {
-            var requestIp = context.Connection.RemoteIpAddress.GetIPV4Address();
-            var clientsIps = TelServer.Clients.Select(t => t.RemoteIpAddress.GetIPV4Address());
-            var webIps = TelServer.ServerOption.CurrentValue.WebAllowAccessIps.Select(t => IPAddress.Parse(t));
-            if (clientsIps.Contains(requestIp) || webIps.Contains(requestIp))
-            {
-                Console.WriteLine($"IP Web Flite :{requestIp} open");
-                await next();
-            }
-            else
-            {
-                Console.WriteLine($"IP Web Flite :{requestIp} close");
-                logger.LogDebug($"【{context.Request.GetDisplayUrl()}】: Close Accept");
-                await context.Response.WriteAsync($"<p> {requestIp} Access Denied</p>");
-            }
-        }
-        else
+        //if (TelServer.ServerOption.CurrentValue.WebAllowAccessIps.Length > 0)
+        //{
+        //    var requestIp = context.Connection.RemoteIpAddress.GetIPV4Address();
+        //    var clientsIps = TelServer.Clients.Select(t => t.RemoteIpAddress.GetIPV4Address());
+        //    var webIps = TelServer.ServerOption.CurrentValue.WebAllowAccessIps.Select(t => IPAddress.Parse(t));
+        //    if (clientsIps.Contains(requestIp) || webIps.Contains(requestIp))
+        //    {
+        //        Console.WriteLine($"IP Web Flite :{requestIp} open");
+        //        await next();
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine($"IP Web Flite :{requestIp} close");
+        //        logger.LogDebug($"【{context.Request.GetDisplayUrl()}】: Close Accept");
+        //        await context.Response.WriteAsync($"<p> {requestIp} Access Denied</p>");
+        //    }
+        //}
+        //else
         {
             await next();
         }
