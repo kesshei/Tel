@@ -31,6 +31,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Update="wwwroot\assets\index-DiwrgTda.css">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\assets\index-DVoHNO1Y.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\assets\react-CHdo91hT.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\index.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\vite.svg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="InitServer.sh">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

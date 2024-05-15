@@ -43,6 +43,13 @@ public class Startup
         // -------------------Tel STEP1 OF 3------------------
         services.AddTelServer(Configuration.GetSection("TelConfig"));
         // -------------------Tel STEP1 END-------------------
+
+        services.AddCors(options => {
+            options.AddDefaultPolicy(policy =>
+            {
+                policy.SetIsOriginAllowed(_ => true).AllowAnyMethod().AllowAnyHeader().AllowCredentials();
+            });
+        });
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,7 +73,7 @@ public class Startup
         app.UseStaticFiles();
         app.UseAuthentication();
         app.UseAuthorization();
-
+        app.UseCors();
         app.UseEndpoints(endpoints =>
         {
             endpoints.MapControllers();

@@ -48,8 +48,7 @@ public class Program
                 webHostBuilder.ConfigureAppConfiguration((hostingContext, config) =>
                 {
                     var env = hostingContext.HostingEnvironment;
-                    config.AddJsonFile("config/appsettings.json", optional: false, reloadOnChange: true)
-                          .AddJsonFile($"config/appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true);
+                    config.AddJsonFile("config/appsettings.json", optional: false, reloadOnChange: true);
                 });
             })
             .ConfigureWebHostDefaults(webBuilder =>

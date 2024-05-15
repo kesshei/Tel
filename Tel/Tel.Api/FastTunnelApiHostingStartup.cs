@@ -68,7 +68,7 @@ public class TelApiHostingStartup : IHostingStartup
                 });
             }
 
-            services.AddSingleton<CustomExceptionFilterAttribute>();
+          //  services.AddSingleton<CustomExceptionFilterAttribute>();
         });
     }
 }
