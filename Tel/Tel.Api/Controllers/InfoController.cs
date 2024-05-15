@@ -12,7 +12,6 @@ namespace Tel.Api.Controllers;
 
 public class InfoController : BaseController
 {
-    public static ConfigInfo<IpInfo> IpInfos = new ConfigInfo<IpInfo>("ipinfos.json");
     /// <summary>
     /// 获取ip地址
     /// </summary>
@@ -47,12 +46,12 @@ public class InfoController : BaseController
     [HttpPost]
     public object AddIP(Info info)
     {
-        if ((info?.username == "我是中国人" || IpInfos.CurrentConfig.Names.Contains(info?.username)) && info?.ip != null)
+        if ((info?.username == "我是中国人" || SystemConfig.IpInfos.CurrentConfig.Names.Contains(info?.username)) && info?.ip != null)
         {
-            if (!IpInfos.CurrentConfig.Ips.Contains(info.ip))
+            if (!SystemConfig.IpInfos.CurrentConfig.Ips.Contains(info.ip))
             {
-                IpInfos.CurrentConfig.Ips.Add(info.ip);
-                IpInfos.Save();
+                SystemConfig.IpInfos.CurrentConfig.Ips.Add(info.ip);
+                SystemConfig.IpInfos.Save();
             }
             return new
             {
@@ -64,9 +63,4 @@ public class InfoController : BaseController
             code = -1
         };
     }
-}
-public class IpInfo
-{
-    public List<string> Names { get; set; } = new List<string>();
-    public List<string> Ips { get; set; } = new List<string>();
 }

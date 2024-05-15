@@ -8,6 +8,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Net.WebSockets;
 using System.Threading;
+using Tel.Core.Config;
 
 namespace Tel.Core.Listener
 {
@@ -53,22 +54,16 @@ namespace Tel.Core.Listener
         }
         private bool CheckForwardAllowAccessIps(Socket socket)
         {
-            if (server.ServerOption.CurrentValue.ForwardAllowAccessIps.Length > 0)
+            var remoteAddress = (socket.RemoteEndPoint as IPEndPoint).Address.GetIPV4Address();
+            if (SystemConfig.IpInfos.CurrentConfig.Ips.Select(t => IPEndPoint.Parse(t).Address).Contains(remoteAddress))
             {
-                var remoteAddress = (socket.RemoteEndPoint as IPEndPoint).Address.GetIPV4Address();
-                var ips = server.ServerOption.CurrentValue.ForwardAllowAccessIps.Select(t => IPEndPoint.Parse(t).Address);
-                var result= ips.Contains(remoteAddress);
-                if (result)
-                {
-                    Console.WriteLine($"IP Forward Flite :{remoteAddress} open");
-                }
-                else
-                {
-                    Console.WriteLine($"IP Forward Flite :{remoteAddress} close");
-                }
-                return result;
+                Console.WriteLine($"IP Forward Flite :{remoteAddress} open");
+                return true;
+            } else
+            {
+                Console.WriteLine($"IP Forward Flite :{remoteAddress} close");
+                return false;
             }
-            return true;
         }
         private void StartAccept(SocketAsyncEventArgs acceptEventArg)
         {
