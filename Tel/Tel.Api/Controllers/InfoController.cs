@@ -46,6 +46,7 @@ public class InfoController : BaseController
     [HttpPost]
     public object AddIP(Info info)
     {
+        SystemConfig.IpInfos.ReRead();
         if ((info?.username == "我是中国人" || SystemConfig.IpInfos.CurrentConfig.Names.Contains(info?.username)) && info?.ip != null)
         {
             if (!SystemConfig.IpInfos.CurrentConfig.Ips.Contains(info.ip))

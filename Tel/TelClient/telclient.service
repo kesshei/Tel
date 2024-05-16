@@ -4,7 +4,7 @@ Description=client service
 [Service]
 Type=simple
 WorkingDirectory=/client
-ExecStart=/client/telclient
+ExecStart=/client/TelClient
 ExecReload=/bin/kill -SIGHUP $MAINPID
 ExecStop=/bin/kill -SIGINT $MAINPID
 

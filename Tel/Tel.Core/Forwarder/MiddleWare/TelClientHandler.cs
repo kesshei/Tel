@@ -2,6 +2,7 @@ using Tel.Core.Client;
 using Tel.Core.Extensions;
 using Tel.Core.Handlers.Server;
 using Tel.Core.Models;
+using Tel.Common;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Server.Kestrel.Core;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,6 +11,7 @@ using System;
 using System.Net.WebSockets;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Linq;
 
 namespace Tel.Core.Forwarder.MiddleWare
 {
@@ -119,7 +121,7 @@ namespace Tel.Core.Forwarder.MiddleWare
             if (!context.Request.Headers.TryGetValue(TelConst.TEL_TOKEN, out var token))
                 return false;
 
-            if (TelServer.ServerOption.CurrentValue.Tokens?.Contains(token) ?? false)
+            if (TelServer.ServerOption.CurrentValue.Tokens.Select(t => t.Hash512()).ToList().Contains(token))
                 return true;
 
             return false;

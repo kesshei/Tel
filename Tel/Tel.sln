@@ -20,6 +20,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tel.Core.Client", "Tel.Core
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tel.Core", "Tel.Core\Tel.Core.csproj", "{61F2F022-4ACF-4BF6-AC4F-CFAF7CFF267F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tel.Common", "Tel.Common\Tel.Common.csproj", "{4297900C-4D0A-480E-B83C-0566DA69A8FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +48,10 @@ Global
 		{61F2F022-4ACF-4BF6-AC4F-CFAF7CFF267F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61F2F022-4ACF-4BF6-AC4F-CFAF7CFF267F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61F2F022-4ACF-4BF6-AC4F-CFAF7CFF267F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4297900C-4D0A-480E-B83C-0566DA69A8FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4297900C-4D0A-480E-B83C-0566DA69A8FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4297900C-4D0A-480E-B83C-0566DA69A8FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4297900C-4D0A-480E-B83C-0566DA69A8FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -54,6 +60,7 @@ Global
 		{59923C85-CD28-49C0-9168-6DE6212C6EB8} = {0E2A9DA2-26AE-4657-B4C5-3A913E2F5A3C}
 		{3FBDDD8B-B566-4D11-B6B5-09A45BB23076} = {0E2A9DA2-26AE-4657-B4C5-3A913E2F5A3C}
 		{61F2F022-4ACF-4BF6-AC4F-CFAF7CFF267F} = {0E2A9DA2-26AE-4657-B4C5-3A913E2F5A3C}
+		{4297900C-4D0A-480E-B83C-0566DA69A8FB} = {0E2A9DA2-26AE-4657-B4C5-3A913E2F5A3C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D9C6B44-6706-4EE8-9043-802BBE474A2E}

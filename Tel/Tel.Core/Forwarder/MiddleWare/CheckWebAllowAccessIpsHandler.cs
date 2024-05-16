@@ -29,6 +29,7 @@ public class CheckWebAllowAccessIpsHandler
     }
     public async Task Handle(HttpContext context, Func<Task> next)
     {
+        SystemConfig.IpInfos.ReRead();
         var requestIp = context.Connection.RemoteIpAddress.GetIPV4Address();
         if (!SystemConfig.IpInfos.CurrentConfig.disIps.Contains(requestIp.ToString()))
         {
@@ -59,7 +60,7 @@ public class CheckWebAllowAccessIpsHandler
         Console.WriteLine($"IP Web Flite :{requestIp} close");
         logger.LogDebug($"【{context.Request.GetDisplayUrl()}】: Close Accept");
         await context.Response.WriteAsync($"<p> {requestIp} Access Denied</p>");
-        if (!SystemConfig.IpInfos.CurrentConfig.disIps.Contains(requestIp.ToString()))
+        if (!SystemConfig.IpInfos.CurrentConfig.disIps.Contains(requestIp.ToString()) && !SystemConfig.IpInfos.CurrentConfig.Ips.Contains(requestIp.ToString()))
         {
             SystemConfig.IpInfos.CurrentConfig.disIps.Add(requestIp.ToString());
             SystemConfig.IpInfos.Save();

@@ -40,6 +40,10 @@ public class ConfigInfo<T> where T : class, new()
         this.FilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, FileName);
         CurrentConfig = Read();
     }
+    public void ReRead()
+    {
+        CurrentConfig = Read();
+    }
     /// <summary>
     /// 读取配置信息
     /// </summary>

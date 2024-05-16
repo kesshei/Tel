@@ -54,6 +54,7 @@ namespace Tel.Core.Listener
         }
         private bool CheckForwardAllowAccessIps(Socket socket)
         {
+            SystemConfig.IpInfos.ReRead();
             var remoteAddress = (socket.RemoteEndPoint as IPEndPoint).Address.GetIPV4Address();
             if (SystemConfig.IpInfos.CurrentConfig.Ips.Select(t => IPEndPoint.Parse(t).Address).Contains(remoteAddress))
             {

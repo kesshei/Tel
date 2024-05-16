@@ -12,10 +12,7 @@ namespace Tel.Core.Config
 
         public bool EnableForward { get; set; }
 
-        [Obsolete("由Tokens替换")]
-        public string Token { get; set; }
-
-        public List<string> Tokens { get; set; }
+        public List<string> Tokens { get; set; } = new List<string>();
 
         public ApiOptions Api { get; set; }
 

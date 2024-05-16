@@ -13,6 +13,7 @@ using Tel.Core.Models.Massage;
 using Tel.Core.Utilitys;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Tel.Common;
 
 namespace Tel.Core.Client;
 
@@ -80,7 +81,7 @@ public class TelClient : ITelClient
         socket = new ClientWebSocket();
         socket.Options.RemoteCertificateValidationCallback = delegate { return true; };
         socket.Options.SetRequestHeader(TelConst.TEL_VERSION, AssemblyUtility.GetVersion().ToString());
-        socket.Options.SetRequestHeader(TelConst.TEL_TOKEN, ClientConfig.Token);
+        socket.Options.SetRequestHeader(TelConst.TEL_TOKEN, ClientConfig.Token.Hash512());
 
         _logger.LogInformation($"正在连接服务端 {Server.ServerAddr}:{Server.ServerPort}");
         await socket.ConnectAsync(
