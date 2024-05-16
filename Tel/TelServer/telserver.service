@@ -3,8 +3,7 @@ Description=telserver
 
 [Service]
 Type=simple
-WorkingDirectory=/server
-ExecStart=/server/telserver
+ExecStart=/server/TelServer
 ExecReload=/bin/kill -SIGHUP $MAINPID
 ExecStop=/bin/kill -SIGINT $MAINPID
 

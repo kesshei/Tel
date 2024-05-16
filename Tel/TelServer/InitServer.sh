@@ -3,6 +3,7 @@ ServerPath='/lib/systemd/system'
 FileName='telserver.service'
 
 chmod +x $FileName
+chmod +x TelServer
 chmod +x RemoveServer.sh
 
 cp $FileName $ServerPath/$FileName
