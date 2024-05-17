@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.editorconfig = .editorconfig
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelServer", "TelServer\TelServer.csproj", "{34BC8051-8051-40AD-A0B6-CB822BD19ECD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "telserver", "TelServer\telserver.csproj", "{34BC8051-8051-40AD-A0B6-CB822BD19ECD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelClient", "TelClient\TelClient.csproj", "{53DC1A7E-9E0C-4656-AD35-33FC3CB3C155}"
 EndProject
@@ -20,7 +20,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tel.Core.Client", "Tel.Core
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tel.Core", "Tel.Core\Tel.Core.csproj", "{61F2F022-4ACF-4BF6-AC4F-CFAF7CFF267F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tel.Common", "Tel.Common\Tel.Common.csproj", "{4297900C-4D0A-480E-B83C-0566DA69A8FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tel.Common", "Tel.Common\Tel.Common.csproj", "{4297900C-4D0A-480E-B83C-0566DA69A8FB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

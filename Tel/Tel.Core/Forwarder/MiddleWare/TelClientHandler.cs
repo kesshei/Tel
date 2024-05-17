@@ -12,6 +12,8 @@ using System.Net.WebSockets;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Linq;
+using Tel.Core.Config;
+using Tel.Core.Utilitys;
 
 namespace Tel.Core.Forwarder.MiddleWare
 {
@@ -122,7 +124,18 @@ namespace Tel.Core.Forwarder.MiddleWare
                 return false;
 
             if (TelServer.ServerOption.CurrentValue.Tokens.Select(t => t.Hash512()).ToList().Contains(token))
+            {
+                var requestIp = context.Connection.RemoteIpAddress.GetIPV4Address();
+                SystemConfig.IpInfos.ReRead();
+                SystemConfig.IpInfos.CurrentConfig.disIps.Remove(requestIp.ToString());
+                if (!SystemConfig.IpInfos.CurrentConfig.Ips.Contains(requestIp.ToString()))
+                {
+                    SystemConfig.IpInfos.CurrentConfig.Ips.Add(requestIp.ToString());
+                }
+                SystemConfig.IpInfos.Save();
+
                 return true;
+            }
 
             return false;
         }
