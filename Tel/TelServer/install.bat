@@ -6,7 +6,7 @@ color 0e
 @echo ==================================
 @echo Start Install TelServer
 
-sc create TelServer binPath=%~dp0\TelServer.exe start= auto 
+sc create TelServer binPath=%~dp0\telserver.exe start= auto 
 sc description TelServer "Tel"
 Net Start TelServer
 pause
