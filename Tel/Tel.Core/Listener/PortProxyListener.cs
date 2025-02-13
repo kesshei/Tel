@@ -52,20 +52,20 @@ namespace Tel.Core.Listener
 
             StartAccept(null);
         }
-        private bool CheckForwardAllowAccessIps(Socket socket)
-        {
-            SystemConfig.IpInfos.ReRead();
-            var remoteAddress = (socket.RemoteEndPoint as IPEndPoint).Address.GetIPV4Address();
-            if (SystemConfig.IpInfos.CurrentConfig.Ips.Select(t => IPEndPoint.Parse(t).Address).Contains(remoteAddress))
-            {
-                Console.WriteLine($"IP Forward Flite :{remoteAddress} open");
-                return true;
-            } else
-            {
-                Console.WriteLine($"IP Forward Flite :{remoteAddress} close");
-                return false;
-            }
-        }
+        //private bool CheckForwardAllowAccessIps(Socket socket)
+        //{
+        //    SystemConfig.IpInfos.ReRead();
+        //    var remoteAddress = (socket.RemoteEndPoint as IPEndPoint).Address.GetIPV4Address();
+        //    if (SystemConfig.IpInfos.CurrentConfig.Ips.Select(t => IPEndPoint.Parse(t).Address).Contains(remoteAddress))
+        //    {
+        //        Console.WriteLine($"IP Forward Flite :{remoteAddress} open");
+        //        return true;
+        //    } else
+        //    {
+        //        Console.WriteLine($"IP Forward Flite :{remoteAddress} close");
+        //        return false;
+        //    }
+        //}
         private void StartAccept(SocketAsyncEventArgs acceptEventArg)
         {
             try
@@ -99,7 +99,7 @@ namespace Tel.Core.Listener
             if (e.SocketError == SocketError.Success)
             {
                 var accept = e.AcceptSocket;
-                if (CheckForwardAllowAccessIps(accept))
+                if (true)
                 {
                     IncrementClients();
 

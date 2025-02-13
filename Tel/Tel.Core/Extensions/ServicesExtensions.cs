@@ -35,8 +35,8 @@ public static class ServicesExtensions
             .AddTransient<ILoginHandler, LoginHandler>()
             .AddSingleton<TelClientHandler>()
             .AddSingleton<TelSwapHandler>()
-            .AddSingleton<TelCoreServer>()
-            .AddSingleton<CheckWebAllowAccessIpsHandler>();
+            .AddSingleton<TelCoreServer>();
+            //.AddSingleton<CheckWebAllowAccessIpsHandler>();
     }
 
     /// <summary>
@@ -49,10 +49,10 @@ public static class ServicesExtensions
 
         var swapHandler = app.ApplicationServices.GetRequiredService<TelSwapHandler>();
         var clientHandler = app.ApplicationServices.GetRequiredService<TelClientHandler>();
-        var checkWebAllowAccessIpsHandler = app.ApplicationServices.GetRequiredService<CheckWebAllowAccessIpsHandler>();
+        //var checkWebAllowAccessIpsHandler = app.ApplicationServices.GetRequiredService<CheckWebAllowAccessIpsHandler>();
         app.Use(clientHandler.Handle);
         app.Use(swapHandler.Handle);
-        app.Use(checkWebAllowAccessIpsHandler.Handle);
+        //app.Use(checkWebAllowAccessIpsHandler.Handle);
     }
 
     public static void MapTelServer(this IEndpointRouteBuilder endpoints)
